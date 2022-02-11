@@ -1,0 +1,657 @@
+:root {
+    --dark-body: rgb(10, 10, 10);
+    --dark-head-footer: rgb(00, 00, 00);
+    --dark-second: #79788c;
+    /* --dark-hover: #323048; */
+    --dark-text: #fbfbff;
+    --dark-text-hover: #000;
+    --dark-background-hover: #000;
+
+
+    --light-body: #fdfdfd;
+    --light-main: #fdfdfd;
+    --light-second: #c3c2c8;
+    /* --light-hover: #edf0f5; */
+    --light-text: #151426;
+    --light-text-hover: #edf0f5;
+    --light-background-hover: #edf0f5;
+
+
+    --blue: #1782da;
+    --white: #fff;
+    --text-static: #fbfbff;
+    --button-padding: 0.5rem;
+    --button-border-radius: 0.5rem;
+    --border-font: 2px solid #f1f1f1;
+
+    --shadow-dark: 0 0 15px rgba(0, 0, 0, 5);
+    --shadow-light: 2px 2px 5px grey;
+
+    --font-family: Roboto;
+
+    /* photo */
+    --logo-photo-border-radius: 50rem;
+    --logo-photo-padding: 5rem;
+    --filtre-img: brightness(0.3);
+
+
+}
+
+/* mode dark and light */
+
+
+.dark {
+    --bg-body: var(--dark-body);
+    --bg-main: var(--dark-main);
+    --bg-second: var(--dark-second);
+    --color-hover: var(--dark-text-hover);
+    --color-text: var(--dark-text);
+    --shadow: var(--shadow-light);
+    --background-hover: var(--dark-background-hover);
+    --background-head-footer: var(--dark-head-footer);
+}
+
+.light {
+    --bg-body: var(--light-body);
+    --bg-main: var(--light-main);
+    --bg-second: var(--light-second);
+    --color-hover: var(--light-text-hover);
+    --color-text: var(--light-text);
+    --shadow: var(--shadow-dark);
+    --background-hover: var(--light-background-hover);
+    --background-head-footer: var(--dark-head-footer);
+}
+
+@media only screen and (max-width: 700px) {
+    .header {
+        background-color: var(--bg-body);
+        width: 100%;
+        position: fixed;
+
+
+    }
+
+    .img {
+        border-radius: var(--logo-photo-border-radius);
+        width: var(--logo-photo-padding);
+        margin-left: 0.5rem;
+        display: none;
+
+
+    }
+
+    .img-header h2 {
+        color: var(--color-text);
+        display: block;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    header {
+        justify-content: space-between;
+        position: fixed;
+        color: var(--color-text);
+        z-index: 10;
+        font-family: var(--font-family);
+        height: var(--height-font-size-header);
+
+
+
+    }
+
+    .vie-de-l_eglise {
+        display: none;
+        position: absolute;
+        height: 7rem;
+        background: var(--text-static);
+        /* box-shadow: var(--shadow); */
+        border-bottom: gray 2px solid;
+    }
+
+    .vie-de-l_eglise li a {
+        position: relative;
+        top: 2rem;
+        text-align: center;
+        align-items: center;
+        text-transform: capitalize;
+        left: -14px;
+    }
+
+    .medias:hover .media-sous {
+        display: block;
+    }
+
+    .media-sous {
+        display: none;
+        position: absolute;
+        height: 7rem;
+        background: var(--text-static);
+        list-style: none;
+        /* box-shadow: var(--shadow); */
+        border-bottom: grey 2px solid;
+
+    }
+
+    .media-sous li a {
+        position: relative;
+        top: 2rem;
+        text-align: center;
+        align-items: center;
+        text-transform: capitalize;
+        left: -14px;
+    }
+
+
+    .liste {
+        z-index: 50;
+        position: relative;
+    }
+
+    .toogle {
+        display: none;
+    }
+
+    nav .liste {
+        display: block;
+        list-style: none;
+        justify-content: space-around;
+        text-align: start;
+        align-items: center;
+        color: var(--text-static);
+        font-size: 20px;
+        font-weight: 600;
+
+        background-color: var(--bg-second);
+        box-shadow: var(--shadow);
+        z-index: 20;
+        position: relative;
+        transition: all 0.2s ease-in-out;
+        top: -1rem;
+        left: 1rem;
+
+    }
+
+    .liste li a {
+        text-decoration: none;
+        color: var(--text-static);
+        transition: all 0.2s ease-in-out;
+
+    }
+
+    .liste li {
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        border-bottom: var(--color-text) 1px solid;
+        margin: 1rem;
+    }
+
+
+    .vie-de-l_eglise li a {
+        position: relative;
+        top: 2rem;
+        color: var(--dark-text-hover);
+        text-align: center;
+        align-items: center;
+        text-transform: lowercase;
+    }
+
+    .media-sous li a {
+        position: relative;
+        top: 2rem;
+        color: var(--dark-text-hover);
+        text-align: center;
+        align-items: center;
+        text-transform: lowercase;
+    }
+
+    .toogle {
+        position: absolute;
+        top: -3rem;
+        z-index: 21;
+        right: 5rem;
+        font-size: 20px;
+    }
+
+    .fa-bars {
+        display: block;
+        padding: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: var(--text-static);
+
+    }
+
+    .fa-times {
+        position: absolute;
+        top: -5.3rem;
+        right: -1rem;
+        font-size: 2.2rem;
+        padding: 1rem;
+        z-index: 1;
+        display: block;
+        cursor: pointer;
+
+
+    }
+
+    /* versions de medias  */
+    .premiere {
+
+        height: 80vh;
+        width: 100%;
+        display: block;
+
+    }
+
+    .deuxieme {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        height: 80vh;
+        width: 100%;
+        display: block;
+    }
+
+    .troisieme {
+        display: block;
+
+        height: auto;
+        width: 100%;
+
+    }
+
+    .nom-eglise {
+        display: none;
+    }
+
+
+
+    /* fin de section Medias */
+
+
+
+
+    /* fin de header */
+
+
+
+    .photo-bac {
+        background-image: url(img/wosh/background.jpg);
+        /* background: gray; */
+        background-repeat: no-repeat;
+        background-position: none;
+        height: 80vh;
+        margin: 0.2rem;
+        border: none;
+        filter: var(--filtre-img);
+        /* position: sticky; */
+        -webkit-filter: var(--filtre-img);
+
+    }
+
+    .accueil {
+
+        fill-opacity: 0.15px;
+        height: 80vh;
+        margin: 0.2rem;
+        border: var(--bg-body);
+
+    }
+
+    .nom-eglise {
+        position: absolute;
+        top: 15rem;
+        left: 2rem;
+        font-family: cursive;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--text-static);
+    }
+
+
+
+    .nom-eglise .fa-angle-down {
+        position: relative;
+        top: 5rem;
+        left: 12rem;
+        font-size: 45px;
+        font-weight: bold;
+        color: var(--text-static);
+        cursor: pointer;
+        display: none;
+    }
+
+    /* les extensions de l'eglise subdivise en deux parties qui sont nommees comment suivant : premiere et deuxieme */
+
+    .premiere {
+        display: block;
+        height: auto;
+        padding: none;
+
+    }
+
+    .premiere h1 {
+        margin: none;
+        position: relative;
+        top: 2rem;
+    }
+
+    .deuxieme {
+        display: block;
+        height: auto;
+        padding: none;
+
+    }
+
+    .deuxieme h1 {
+        margin: none;
+        position: relative;
+        top: 2rem;
+    }
+
+    .premiere button,
+    .deuxieme button {
+        border-radius: var(--button-border-radius);
+        padding: var(--button-padding);
+        color: var(--dark-text-hover);
+        border: var(--light-text-hover) 1px solid;
+        background: var(--text-static);
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        margin-top: 3rem;
+        margin-left: 15rem;
+
+    }
+
+
+    /* section 5 programmes de culte */
+    .horaire {
+        display: block;
+        height: auto;
+    }
+
+    /*================= fin de section 5 ()=================================================== */
+
+
+    /* ========================================================================================
+    --====================commencement d'une nouvelle page de la construction du temple de Dieu
+    =============================================================================================== */
+    .section1-const {
+        height: auto;
+        background: var(--bg-second);
+        padding: 2rem;
+    }
+
+    .section2-const .pourquoi-const {
+        height: auto;
+        background: var(--bg-second);
+        padding: 2rem;
+    }
+
+
+    /* section 2 */
+    .section3-const {
+        display: block;
+    }
+
+    /* section 2 */
+    .section2-const {
+        display: block;
+    }
+
+    /* deuxieme section3 */
+    .section3-const {
+        height: auto;
+        background: var(--bg-body);
+        padding: 2rem;
+        color: var(--color-text);
+        display: flex;
+        display: block;
+        grid-template-columns: repeat(3, 2fr);
+
+    }
+
+    /* section 3 */
+    /* section galleries */
+    .section1-const,
+    .section2-const,
+    .section3-const {
+        background: var(--blue);
+        margin: 0;
+        cursor: pointer;
+
+    }
+
+    .gallerie-const img {
+        width: 90%;
+        height: auto;
+        margin: 0;
+    }
+
+    .gallerie1,
+    .gallerie2,
+    .gallerie3,
+    .gallerie4 {
+        display: block;
+        width: 100%;
+        height: auto;
+
+
+    }
+
+    /* ========================================================================================
+    --====================fin d'une nouvelle page de la construction du temple de Dieu
+    =============================================================================================== */
+
+    /* footer */
+    footer .de-footer {
+        display: block;
+        background: var(--bg-body);
+    }
+
+    .copy {
+        display: block;
+        width: auto;
+    }
+
+    .img-footer {
+        margin: 10px auto;
+        margin-left: 20rem;
+        display: none;
+    }
+
+    .img-titre h1 {
+        display: flex;
+        position: relative;
+        left: 0.9rem;
+        color: var(--blue);
+    }
+
+    .de-footer1 .program {
+        justify-content: center;
+
+        margin-left: 9.5rem;
+
+
+    }
+
+    .de-footer2 {
+        margin-left: 2.5rem;
+        height: auto;
+    }
+
+    .de-footer2 h2 {
+        color: var(--blue);
+    }
+
+    .de-footer2 .line {
+        margin-left: 8rem;
+        margin-top: -2rem;
+    }
+
+    .calendrier {
+        height: 55vh;
+        /* width: 23rem; */
+        background-color: var(--bg-main);
+        border-radius: 30px;
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+
+
+
+
+/* =================================> media query 550px================================
+ <================================================================================> */
+
+@media only screen and (max-width: 550px) {
+    .toogle {
+        display: none;
+    }
+
+    .premiere button,
+    .deuxieme button {
+        border-radius: var(--button-border-radius);
+        padding: var(--button-padding);
+        color: var(--color-text);
+        border: var(--light-text-hover) 1px solid;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        margin-top: 2rem;
+        margin-left: 9.8rem;
+
+    }
+
+    .fa-bars {
+        display: block;
+        padding: 1rem;
+        position: absolute;
+        top: 1.3rem;
+        right: 0.5rem;
+    }
+
+    .fa-times {
+        position: absolute;
+        top: -2.3rem;
+        right: -0rem;
+        font-size: 2.2rem;
+        padding: 1rem;
+        z-index: 1;
+        display: block;
+        cursor: pointer;
+
+
+    }
+
+    .gallerie-const img {
+        width: inherit;
+        height: auto;
+    }
+
+    .gallerie1,
+    .gallerie2,
+    .gallerie3,
+    .gallerie4 {
+
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+}
+
+
+
+/*=================================> media query 350px================================
+ <================================================================================> */
+@media only screen and (max-width: 350px) {
+    .calendrier {
+        height: max-content;
+        width: 18rem;
+        display: none;
+        background-color: var(--bg-main);
+        border-radius: 30px;
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .premiere button,
+    .deuxieme button {
+        border-radius: var(--button-border-radius);
+        padding: var(--button-padding);
+        color: var(--color-text);
+        border: var(--light-text-hover) 1px solid;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        margin-top: 2rem;
+        margin-left: 5rem;
+
+    }
+
+    .nom-eglise {
+        position: absolute;
+        top: 15rem;
+        left: 0.9rem;
+        font-family: cursive;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--text-static);
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+
+    .de-footer1 .program {
+        justify-content: center;
+        position: relative;
+        left: 0rem;
+
+    }
+
+    .de-footer2 .line {
+        margin-left: 0;
+        margin-top: -2rem;
+    }
+
+    .de-footer1 .program {
+        justify-content: center;
+
+        margin-left: 2rem;
+    }
+
+    nav .liste {
+        display: none;
+    }
+
+    .fa-bars {
+        display: none;
+    }
+
+    .gallerie-const img {
+        width: inherit;
+        height: auto;
+    }
+
+    .gallerie1,
+    .gallerie2,
+    .gallerie3,
+    .gallerie4 {
+        display: none;
+        height: 40%;
+        width: auto;
+        height: auto;
+        margin-left: 40%;
+
+
+    }
+}

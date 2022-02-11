@@ -1,0 +1,1203 @@
+:root {
+    --dark-body: rgb(10, 10, 10);
+    --dark-head-footer: rgb(00, 00, 00);
+    --dark-second: #79788c;
+    /* --dark-hover: #323048; */
+    --dark-text: #fbfbff;
+    --dark-text-hover: #000;
+    --dark-background-hover: #000;
+
+
+    --light-body: #fdfdfd;
+    --light-main: #fdfdfd;
+    --light-second: #c3c2c8;
+    /* --light-hover: #edf0f5; */
+    --light-text: #151426;
+    --light-text-hover: #edf0f5;
+    --light-background-hover: #edf0f5;
+
+
+    --blue: #1782da;
+    --white: #fff;
+    --text-static: #fbfbff;
+    --button-padding: 1rem;
+    --button-border-radius: 0.5rem;
+    --border-font: 2px solid #f1f1f1;
+
+    --shadow-dark: 0 0 15px rgba(0, 0, 0, 5);
+    --shadow-light: 2px 2px 5px grey;
+
+    --font-family: Roboto;
+
+    /* photo */
+    --logo-photo-border-radius: 50rem;
+    --logo-photo-padding: 5rem;
+    --filtre-img: brightness(0.3);
+
+
+}
+
+/* mode dark or light */
+
+
+.dark {
+    --bg-body: var(--dark-body);
+    --bg-main: var(--dark-main);
+    --bg-second: var(--dark-second);
+    --color-hover: var(--dark-text-hover);
+    --color-text: var(--dark-text);
+    --shadow: var(--shadow-light);
+    --background-hover: var(--dark-background-hover);
+    --background-head-footer: var(--dark-head-footer);
+}
+
+.light {
+    --bg-body: var(--light-body);
+    --bg-main: var(--light-main);
+    --bg-second: var(--light-second);
+    --color-hover: var(--light-text-hover);
+    --color-text: var(--light-text);
+    --shadow: var(--shadow-dark);
+    --background-hover: var(--light-background-hover);
+    --background-head-footer: var(--dark-head-footer);
+}
+
+/* :hover {} */
+
+
+/* entet les listes de navigation */
+.header {
+
+    height: 80px;
+    box-shadow: var(--shadow);
+    background: var(--text-static);
+    position: -webkit-sticky;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    /* overflow: hidden; */
+    padding-bottom: 2rem;
+
+
+}
+
+.eglise-organ:hover .vie-de-l_eglise {
+    display: block;
+
+}
+
+.vie-de-l_eglise {
+    display: none;
+    position: absolute;
+    height: 7rem;
+    background: var(--text-static);
+    /* box-shadow: var(--shadow); */
+    border-bottom: gray 2px solid;
+}
+
+.vie-de-l_eglise li a {
+    position: relative;
+    top: 2rem;
+    text-align: center;
+    align-items: center;
+    text-transform: capitalize;
+    left: -14px;
+}
+
+.medias:hover .media-sous {
+    display: block;
+}
+
+.media-sous {
+    display: none;
+    position: absolute;
+    height: 7rem;
+    background: var(--text-static);
+    list-style: none;
+    /* box-shadow: var(--shadow); */
+    border-bottom: grey 2px solid;
+
+}
+
+.media-sous li a {
+    position: relative;
+    top: 2rem;
+    text-align: center;
+    align-items: center;
+    text-transform: capitalize;
+    left: -14px;
+}
+
+
+.img {
+    border-radius: var(--logo-photo-border-radius);
+    width: var(--logo-photo-padding);
+    margin-left: 0.5rem;
+    -webkit-border-radius: var(--logo-photo-border-radius);
+    -moz-border-radius: var(--logo-photo-border-radius);
+    -ms-border-radius: var(--logo-photo-border-radius);
+    -o-border-radius: var(--logo-photo-border-radius);
+}
+
+.img-header h2 {
+    display: none;
+}
+
+header {
+    justify-content: space-between;
+
+    color: var(--color-text);
+    z-index: 10;
+    font-family: var(--font-family);
+    height: var(--height-font-size-header);
+    /* box-shadow: var(--shadow);
+    background-color: var(--bg-body); */
+
+
+}
+
+
+
+
+nav .liste {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    color: var(--text-static);
+    /* font-size: 20px; */
+    font-weight: bolder;
+
+
+}
+
+.liste li a {
+    text-decoration: none;
+    color: var(--dark-text-hover);
+    font-size: 26px;
+    font-weight: bolder;
+    font-family: var(--font-family);
+    text-transform: capitalize;
+}
+
+nav .liste li a:hover {
+    text-decoration: underline;
+    color: var(--blue);
+}
+
+.fa-bars {
+    font-size: 2rem;
+    margin-left: 1.4rem;
+    cursor: pointer;
+    display: none;
+    background: var(--blue);
+}
+
+.fa-times {
+    /* color: red; */
+    background: var(--blue);
+    display: none;
+}
+
+#one {
+    display: none;
+}
+
+/* /////// */
+
+
+
+
+.photo-bac {
+    background-image: url(img/wosh/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    margin: 0.2rem;
+    border: none;
+    filter: var(--filtre-img);
+    position: sticky;
+    -webkit-filter: var(--filtre-img);
+}
+
+.accueil H2 {
+
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: block;
+    color: var(--text-static);
+    position: absolute;
+    top: 10rem;
+    left: 22rem;
+    font-size: 40px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.accueil h2 span {
+    border: var(--border-font);
+    border-bottom: none;
+    color: var(--text-static);
+    position: relative;
+    top: 1rem;
+
+}
+
+.nom-eglise .fa-angle-down {
+    font-size: 45px;
+    font-weight: bold;
+    color: var(--text-static);
+    cursor: pointer;
+    position: relative;
+    top: 5rem;
+    left: -5rem;
+
+}
+
+/* section2 */
+.accueil2 {
+
+    background-image: url(img/wosh/adorat.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.99;
+    height: 90vh;
+    margin: 0.2rem;
+    color: var(--text-static);
+    /* width: 100%; */
+
+}
+
+.accueil2 h2 {
+    color: var(--text-color-if-hover);
+    word-wrap: break-word;
+    word-break: normal;
+    margin: 20px;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bolder;
+    justify-content: center;
+    position: absolute;
+    margin-top: 15rem;
+    top: 35rem;
+    font-family: var(--font-family);
+}
+
+button {
+    border-radius: var(--button-border-radius);
+
+    padding: var(--button-padding);
+    color: var(--color-text);
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    top: 29rem;
+    left: 36rem;
+    cursor: pointer;
+    background-color: var(--light-background-hover);
+}
+
+button:hover {
+    background: var(--dark-background-hover);
+    color: var(--light-text-hover);
+
+}
+
+h2 .ensavoir {
+    position: absolute;
+    top: -3rem;
+    left: 35rem;
+    text-align: center;
+    justify-content: center;
+    font-size: 40px;
+
+
+}
+
+
+
+.accueil3 {
+    width: 100%;
+    margin: 0.2rem;
+    background-color: var(--bg-body);
+    height: 80vh;
+    margin-bottom: 10rem;
+
+}
+
+
+/* transition ================img */
+
+.display {
+    display: flex;
+    width: 100%;
+    margin: 0.2rem;
+    background: var(--bg-body);
+}
+
+.i1 {
+    flex: 1;
+    width: 25%;
+
+}
+
+.i2 {
+    flex: 1;
+    width: 25%;
+}
+
+.i3 {
+    flex: 1;
+    width: 25%;
+}
+
+.containeur-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* les code suivant est concerne l'animation de nos devise
+ et nos valeurs il est divise en trois card de card1 à card3 */
+.card1 {
+    position: relative;
+    width: 470px;
+    height: 530;
+    background: var(--bg-body);
+    padding: 50px;
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    transition: 1s;
+    /* box-shadow: var(--shadow); */
+
+}
+
+.card1:hover {
+    transform: perspective(2000px)
+        /* translateY(50%) */
+    ;
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0 0.15), 0 20px 10px rgba(0, 0, 0 0.15);
+    -webkit-transform: perspective(2000px);
+    -moz-transform: perspective(2000px);
+    -ms-transform: perspective(2000px);
+    -o-transform: perspective(2000px);
+}
+
+.card1 .cover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--background-hover);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    transform-origin: left;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -ms-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+}
+
+.card1 .cover img {
+    max-width: 100%;
+    z-index: 1;
+}
+
+.card1:hover .cover {
+    transform: rotateX(-180deg);
+    -webkit-transform: rotateX(-180deg);
+    -moz-transform: rotateX(-180deg);
+    -ms-transform: rotateX(-180deg);
+    -o-transform: rotateX(-180deg);
+}
+
+.card1 .details {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+
+}
+
+/* espace reseve pour le africa */
+
+.display h2 {
+    position: relative;
+    top: -1rem;
+    /* color:red; */
+}
+
+/* fin africa */
+
+
+
+
+.card1 .details h2 {
+    font-weight: 600;
+    margin: #eb2A5b;
+
+}
+
+/* deuxieme img */
+.card2 {
+    position: relative;
+    width: 470px;
+    height: 530;
+    background: var(--bg-body);
+    padding: 50px;
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    transition: 1s;
+    /* box-shadow: var(--color-hover); */
+
+}
+
+.card2:hover {
+    transform: perspective(2000px)
+        /* translateY(50%) */
+    ;
+    box-shadow: var(--color-hover);
+
+
+}
+
+.card2 .cover {
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--background-hover);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    transform-origin: left;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -ms-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+
+}
+
+.card2 .cover img {
+    max-width: 100%;
+    z-index: 1;
+}
+
+.card2:hover .cover {
+    transform: rotateY(-180deg);
+}
+
+.card2 .details {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+
+}
+
+.display h2 {
+    position: relative;
+    top: -1rem;
+    /* color:red; */
+}
+
+.card2 .details h2 {
+    font-weight: 600;
+    margin: #eb2A5b;
+
+}
+
+/* fin deuxieme ===================================*/
+
+/* commmencement de 3============================== */
+
+.card3 {
+    position: relative;
+    width: 470px;
+    height: 530;
+    background: var(--bg-body);
+    padding: 50px;
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    transition: 1s;
+    /* box-shadow: var(--color-hover); */
+
+}
+
+.card3:hover {
+    transform: perspective(2000px)
+        /* translateY(50%) */
+    ;
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0 0.15), 0 20px 10px rgba(0, 0, 0 0.15);
+
+
+}
+
+.card3 .cover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-body);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    transform-origin: left;
+}
+
+.card3 .cover img {
+    width: 20rem;
+    z-index: 1;
+}
+
+
+
+.card3:hover .cover {
+    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+}
+
+.card3 .details {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+
+}
+
+.display h2 {
+    position: relative;
+    top: -1rem;
+    /* color:red; */
+}
+
+.card3 .details h2 {
+    font-weight: 600;
+    margin: #eb2A5b;
+
+}
+
+/* fin 3 */
+
+.img1 {
+    width: 350px;
+    height: 520px;
+}
+
+.img2 {
+    width: 350px;
+    height: 520px;
+
+}
+
+/* fin de la transition */
+
+
+
+
+/* construction du batiment */
+
+.accueil4 {
+    width: 100%;
+    height: 50rem;
+    border: none;
+    margin-bottom: 10rem;
+    color: var(--text-static);
+    /* filter:var(--filtre-img); */
+}
+
+.text-accueil4 {
+    color: var(--color-text);
+}
+
+.accueil4 .img-chantier {
+    filter: var(--filtre-img);
+    -webkit-filter: var(--filtre-img);
+    background-size: cover;
+    width: 100%;
+}
+
+.accueil4 h2 {
+    position: relative;
+    top: -40rem;
+    left: 0;
+    z-index: 1;
+    color: var(--text-color-if-hover);
+    word-wrap: break-word;
+    word-break: normal;
+    margin: 20px;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bolder;
+    justify-content: center;
+    padding: 1rem;
+    font-family: var(--font-family);
+    margin-left: 5rem;
+}
+
+.accueil4 .h2temple {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: bold;
+}
+
+.btn2 {
+    position: relative;
+    top: -30rem;
+    color: var(--dark-text-hover);
+}
+
+/* fini le batiment  et construction*/
+
+
+/* commencement de programmes de cultes */
+.section5 {
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 8rem;
+    background: var(--bg-body);
+}
+
+.section5 .text {
+    font-size: 20px;
+    text-align: center;
+    justify-content: space-between;
+    display: inline-block;
+    padding-bottom: 2rem;
+    font-weight: bold;
+    padding-top: 2rem;
+    margin-left: 20rem;
+
+}
+
+.section5 .text h3 {
+    font-weight: bolder;
+    font-style: oblique;
+}
+
+.section5 .horaire {
+    display: flex;
+    padding-left: 5rem;
+}
+
+.program-img1 {
+    border-radius: var(--logo-photo-border-radius);
+    -webkit-border-radius: var(--logo-photo-border-radius);
+    -moz-border-radius: var(--logo-photo-border-radius);
+    -ms-border-radius: var(--logo-photo-border-radius);
+    -o-border-radius: var(--logo-photo-border-radius);
+    width: 66%;
+    height: 50%;
+    filter: brightness(0.5);
+    -webkit-filter: brightness(0.5);
+}
+
+.section5 .text h2 {
+    font-size: 40px;
+    font-family: var(--font-family);
+    font-weight: 100;
+}
+
+.section5 .horaire .img1-horaire {
+    flex: 1;
+
+}
+
+.section5 .horaire .img2-horaire {
+    flex: 1;
+}
+
+.section5 .horaire .img3-horaire {
+    flex: 1;
+}
+
+.horaire h4 {
+    text-align: start;
+    font-size: 18px;
+    font-weight: bolder;
+    padding-top: 1rem;
+    align-items: center;
+    margin-left: 5rem;
+}
+
+.img1-horaire h4 {
+    font-size: 25px;
+    padding-top: 1rem;
+}
+
+.horaire small {
+    font-size: 18px;
+    font-family: var(--font-family);
+}
+
+.horaire span {
+    cursor: pointer;
+}
+
+.horaire small i {
+    margin-left: 8rem;
+    font-weight: bold;
+}
+
+/* fin  de la section programme======================================= */
+
+/* commencement des extensions de l'eglise section6 */
+.section6 {
+    width: 100%;
+    height: 40vh;
+    margin-bottom: 20rem;
+    color: var(--text-static);
+    background: var();
+}
+
+.section6 .img-extention {
+    /* width: 100%; */
+    filter: var(--filtre-img);
+    -webkit-filter: var(--filtre-img);
+    height: auto;
+}
+
+.section6 .text-section6 h2 {
+    position: relative;
+    top: -35rem;
+    color: var(--text-static);
+    z-index: 1;
+    margin-left: 3rem;
+    margin-right: 1rem;
+}
+
+.section6 .text-section6 h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+
+
+}
+
+.section6 .text-section6 h3 {
+    font-size: 18px;
+    font-weight: 100;
+    position: relative;
+    top: -35rem;
+    color: var(--color-static);
+    z-index: 1;
+    margin-left: 3rem;
+    margin-right: 1rem;
+
+    font-family: var(--font-family);
+}
+
+.text-section6 .ensovoir-extension {
+    position: relative;
+    top: -24rem;
+    left: 35rem;
+    color: var(--text-static);
+}
+
+.text-section6 .ensovoir-extension a {
+    text-decoration: none;
+    color: var(--dark-text-hover);
+}
+
+.text-section6 .ensovoir-extension a:hover {
+    color: var(--text-static);
+}
+
+/* fin de section6 */
+
+/* la section des enseignements et formations */
+.section7 {
+    width: 100%;
+    height: 45vh;
+    z-index: 3;
+    position: relative;
+    top: 20rem;
+    font-family: var(--font-family);
+    margin-bottom: 20rem;
+    background: var(--bg-body);
+    /* background: white; */
+}
+
+.img-learn {
+    /*filter: brightness(0.6);
+    */
+    filter: invert(0.4);
+    width: 100%;
+    height: 45vh;
+    background-position: center;
+}
+
+.section7 h2 {
+    text-align: center;
+    padding: 2rem;
+    font-size: 25px;
+    color: #000;
+    position: absolute;
+    top: 1rem;
+    left: 30rem;
+}
+
+.section7 h3 {
+    font-size: 18px;
+    font-weight: 100;
+    position: absolute;
+    top: 7rem;
+    color: var(--color-text);
+    z-index: 4;
+    margin-left: 3rem;
+    margin-right: 1rem;
+    font-family: var(--font-family);
+}
+
+.section7 .btn-formation {
+    position: relative;
+    top: -4rem;
+    background: var(--light-background-hover);
+    color: var(--dark-text-hover);
+}
+
+.section7 .btn-formation:hover {
+    background: var(--dark-background-hover);
+    color: var(--light-text-hover);
+}
+
+/* fin de section7 */
+
+/* commencement de videos d'enseignements */
+.section8 {
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 20rem;
+    background: var(--bg-body);
+}
+
+.section8 h2 {
+    text-align: center;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+.section8 .small {
+    font-size: 50px;
+    font-weight: bold;
+    background: var(--bg-body);
+
+}
+
+.btn-video {
+    position: relative;
+    top: 5rem;
+    margin-bottom: 1rem;
+}
+
+.section8 .video-iframe {
+    width: 65%;
+    height: 80vh;
+    /* padding-left: 5rem; */
+    margin-top: 5rem;
+    margin: 1rem auto;
+    /* padding-right: 10rem; */
+    justify-content: center;
+    background-image: url(img/refuse.png);
+    /* background: var(--bg-body); */
+}
+
+/* fint */
+
+/* tout footer */
+
+footer {
+    color: var(--color-text);
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    margin-bottom: 0rem;
+    background-color: var(--bg-body);
+}
+
+footer .de-footer {
+    display: flex;
+    background: var(--bg-body);
+}
+
+.de-footer1 {
+    flex: 1;
+
+
+}
+
+.img-titre {
+    margin: 10px auto;
+    width: 90%;
+    clear: both;
+    display: flex;
+}
+
+.de-footer1 img {
+    margin-top: 30px;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+/* .de-footer1 h1 {
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    left: -50px;
+    top: -20px;
+    text-align: center;
+    color: #000;
+} */
+.de-footer1 h1 {
+    padding: 1rem;
+    font-weight: bold;
+    position: relative;
+    top: 1rem;
+    color: var(--color-text);
+    word-wrap: break-word;
+    align-items: center;
+
+}
+
+.program {
+    margin-left: 2rem;
+    font-weight: 600;
+
+}
+
+.program h2 {
+    font-size: 20px;
+    text-align: start;
+    margin-left: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 10px;
+    text-decoration: underline;
+
+}
+
+/* les sites et les adresses a contacter */
+.de-footer2 {
+    flex: 1;
+    display: inline-block;
+
+
+}
+
+.foo-adresse {
+    padding: 1rem;
+    font-weight: bold;
+    position: relative;
+    top: 1rem;
+    color: var(--color-text);
+    word-wrap: break-word;
+
+    align-items: center;
+}
+
+.de-footer2 {
+    margin-bottom: 20px;
+    color: #eb2A5b;
+}
+
+.foo-adresse h2 {
+    margin-top: 2rem;
+}
+
+.line {
+    padding-top: 4rem;
+    margin: 35px;
+    color: var(--color-text);
+
+}
+
+.line a {
+
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.line a:hover {
+    color: var(--blue);
+}
+
+.fa-map-marked,
+.fa-envelope,
+.fa-phone-alt,
+.fa-youtube,
+.fa-facebook,
+.fa-whatsapp,
+.fa-twitter {
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.fa-map-marked:hover,
+.fa-envelope:hover,
+.fa-phone-alt:hover,
+.fa-youtube:hover,
+.fa-facebook:hover,
+.fa-whatsapp:hover,
+.fa-twitter:hover {
+
+
+    font-size: 27px;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+}
+
+/* finit les liens de contacter */
+
+
+/* le div hero est reserve pour le calendrier et voila it start by here */
+#hero {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+
+
+}
+
+#hero .calendrier {
+    margin-top: 2rem;
+}
+
+pre {
+    margin-top: 0.2rem;
+}
+
+.fa-arrows-alt-v {
+    cursor: pointer;
+}
+
+#calendar {
+    display: block;
+}
+
+
+.calendar-year {
+    display: block;
+}
+
+
+/* .calendar-table{
+    z-index: 35;
+} */
+
+.calendar-inner {
+    z-index: 20;
+}
+
+.calendar {
+    height: 40vh;
+}
+
+.btn-programme-de-culte {
+    position: relative;
+    left: 5rem;
+    top: 25rem;
+    background: var(--bg-body);
+    color: var(--color-text);
+}
+
+.btn-programme-de-culte:hover {
+    background: var(--bg-body);
+    color: var(--color-hover);
+}
+
+/* la fin de div hero */
+
+.copy {
+    margin-top: 0px;
+    background: var(--background-head-footer);
+    color: var(--text-static);
+    margin: 0.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-between;
+
+}
+
+.copy .s {
+    padding: 5px;
+}
+
+.copy .social p {
+    margin: 10px;
+    display: inline-flex;
+    border: 1px solid var(--dark-head-footer);
+    border-radius: 100%;
+    color: var(--text-static);
+    padding: 5px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.copy a {
+    text-decoration: none;
+    color: var(--text-static);
+}
+
+;
+/*fin pied */

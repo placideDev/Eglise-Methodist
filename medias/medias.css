@@ -1,0 +1,838 @@
+:root {
+    --dark-body: rgb(10, 10, 10);
+    --dark-head-footer: rgb(00, 00, 00);
+    --dark-second: #79788c;
+    /* --dark-hover: #323048; */
+    --dark-text: #fbfbff;
+    --dark-text-hover: #000;
+    --dark-background-hover: #000;
+
+
+    --light-body: #fdfdfd;
+    --light-main: #fdfdfd;
+    --light-second: #c3c2c8;
+    /* --light-hover: #edf0f5; */
+    --light-text: #151426;
+    --light-text-hover: #edf0f5;
+    --light-background-hover: #edf0f5;
+
+
+    --blue: #1782da;
+    --white: #fff;
+    --text-static: #fbfbff;
+    --button-padding: 1rem;
+    --button-border-radius: 0.5rem;
+    --border-font: 2px solid #f1f1f1;
+
+    --shadow-dark: 0 0 15px rgba(0, 0, 0, 5);
+    --shadow-light: 2px 2px 5px grey;
+
+    --font-family: Roboto;
+
+    /* photo */
+    --logo-photo-border-radius: 50rem;
+    --logo-photo-padding: 5rem;
+    --filtre-img: brightness(0.3);
+    --text-size-title: 18px;
+
+
+}
+
+/* mode dark and light */
+
+
+.dark {
+    --bg-body: var(--dark-body);
+    --bg-main: var(--dark-main);
+    --bg-second: var(--dark-second);
+    --color-hover: var(--dark-text-hover);
+    --color-text: var(--dark-text);
+    --shadow: var(--shadow-light);
+    --background-hover: var(--dark-background-hover);
+    --background-head-footer: var(--dark-head-footer);
+}
+
+.light {
+    --bg-body: var(--light-body);
+    --bg-main: var(--light-main);
+    --bg-second: var(--light-second);
+    --color-hover: var(--light-text-hover);
+    --color-text: var(--light-text);
+    --shadow: var(--shadow-dark);
+    --background-hover: var(--light-background-hover);
+    --background-head-footer: var(--dark-head-footer);
+}
+
+
+
+
+/* ==============================================separation de la section================================================================== */
+
+/* entet les listes de navigation */
+.header {
+
+    height: 50px;
+    box-shadow: var(--shadow);
+    background: var(--text-static);
+    position: -webkit-sticky;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    /* overflow: hidden; */
+    padding-bottom: 2rem;
+
+
+}
+
+.eglise-organ:hover .vie-de-l_eglise {
+    display: block;
+
+}
+
+.vie-de-l_eglise li {
+    list-style: none;
+    align-items: center;
+    justify-content: stretch;
+    color: red;
+}
+
+
+
+.vie-de-l_eglise {
+    display: none;
+    position: absolute;
+    height: 7rem;
+    background: var(--text-static);
+    /* box-shadow: var(--shadow); */
+    border-bottom: gray 2px solid;
+}
+
+.vie-de-l_eglise li a {
+    position: relative;
+    top: 2rem;
+    text-align: center;
+    align-items: center;
+    text-transform: capitalize;
+    left: -2rem;
+}
+
+.medias:hover .media-sous {
+    display: block;
+}
+
+.media-sous {
+    display: none;
+    position: absolute;
+    height: 7rem;
+    background: var(--text-static);
+    list-style: none;
+    /* box-shadow: var(--shadow); */
+    border-bottom: grey 2px solid;
+
+}
+
+.media-sous li a {
+    position: relative;
+    top: 2rem;
+    text-align: center;
+    align-items: center;
+    text-transform: capitalize;
+    left: -4rem;
+
+}
+
+
+.img {
+    border-radius: var(--logo-photo-border-radius);
+    width: var(--logo-photo-padding);
+    margin-left: 0.5rem;
+    position: absolute;
+    left: 2rem;
+    top: -0rem;
+}
+
+.img-header h2 {
+    display: none;
+}
+
+header {
+    justify-content: space-between;
+
+    color: var(--color-text);
+    z-index: 10;
+    font-family: var(--font-family);
+    height: var(--height-font-size-header);
+    /* box-shadow: var(--shadow);
+    background-color: var(--bg-body); */
+
+
+}
+
+.fa-bars {
+    font-size: 2rem;
+    margin-left: 1.4rem;
+    cursor: pointer;
+    display: none;
+    background: var(--bg-second);
+    color: var(--color-text);
+}
+
+.fa-times {
+    /* color: red; */
+    background: var(--bg-second);
+    display: none;
+    color: var(--color-text);
+}
+
+
+
+nav .liste {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    color: var(--color-text);
+    /* font-size: 20px; */
+    font-weight: bolder;
+    float: right;
+    margin: 2rem;
+
+}
+
+.liste li a {
+    text-decoration: none;
+    color: var(--dark-text-hover);
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: var(--font-family);
+    text-transform: uppercase;
+    margin: 1rem;
+
+}
+
+nav .liste li a:hover {
+    text-decoration: underline;
+    color: var(--blue);
+}
+
+
+
+#one {
+    display: none;
+}
+
+/* fin de header */
+
+/* ==============================================separation de la section================================================================== */
+
+.div-video {
+
+    height: 80vh;
+    margin: 0.2rem;
+    border: none;
+    filter: var(--filtre-img);
+    position: sticky;
+
+
+}
+
+.div-video video {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+}
+
+
+
+/* .accueil {
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    fill-opacity: 0.15px;
+    height: 80vh;
+    margin: 0.2rem;
+    border: var(--bg-body);
+}
+*/
+.nom-eglise {
+    text-align: center;
+}
+
+
+.nom-eglise .fa-angle-down {
+    position: relative;
+    top: 5rem;
+    left: 12rem;
+    font-size: 45px;
+    font-weight: bold;
+    color: var(--text-static);
+    cursor: pointer;
+    display: none;
+}
+
+
+/* ==============================================separation de la section================================================================== */
+
+
+/* section le premier ligne */
+
+.deuxieme {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    height: 60vh;
+    width: 100%;
+
+
+}
+
+.deuxieme video {
+    position: relative;
+    width: 100%;
+
+}
+
+
+
+
+/* ==============================================separation de la section================================================================== */
+
+/* secton2 */
+
+.premiere {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    height: 60vh;
+    width: 100%;
+
+}
+
+.premiere iframe {
+    position: relative;
+    width: 100%;
+
+}
+
+
+.troisieme {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    height: 60vh;
+    width: 100%;
+
+}
+
+.troisieme iframe {
+    position: relative;
+    width: 100%;
+}
+
+
+
+.premiere button,
+.deuxieme button,
+.troisieme button {
+    border-radius: var(--button-border-radius);
+    padding: var(--button-padding);
+    color: var(--dark-text-hover);
+    border: var(--light-text-hover) 1px solid;
+    background: var(--text-static);
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 0rem;
+    margin-left: 8rem;
+
+}
+
+/**/
+
+.premiere button:hover {
+    background: var(--dark-background-hover);
+    color: var(--light-text-hover);
+
+}
+
+.deuxieme button:hover {
+    background: var(--dark-background-hover);
+    color: var(--light-text-hover);
+
+}
+
+.troisieme button:hover {
+    background: var(--dark-background-hover);
+    color: var(--light-text-hover);
+
+}
+
+
+/* -=========================================================================================
+-------=====================Commencement du scc pour la page de construction=================
+============================================================================================= */
+
+
+
+
+/* le background pour la page de construction */
+.photo-const {
+    background-image: url(img/chantier.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    margin: 0.2rem;
+    border: none;
+    filter: var(--filtre-img);
+    position: sticky;
+    -webkit-filter: var(--filtre-img);
+
+}
+
+/* ==============================================separation de la section================================================================== */
+
+.section1-const {
+    height: 50vh;
+    background: var(--bg-body);
+    padding: 2rem;
+    color: var(--color-text);
+}
+
+.section1-const .appropos-const h1 {
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: inherit;
+
+}
+
+.section1-const .appropos-const h3 {
+    text-align: start;
+    align-items: center;
+    color: inherit;
+}
+
+.section1-const .appropos {
+    height: 50vh;
+    background: var(--bg-body);
+    padding: 2rem;
+}
+
+/* fin de la premiere section1 */
+
+/* ==============================================separation de la section================================================================== */
+
+/* deuxieme section2 */
+.section2-const .pourquoi-const {
+    height: 50vh;
+    background: var(--bg-second);
+    padding: 2rem;
+}
+
+.section2-const .pourquoi-const h1 {
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: var(--color-text);
+}
+
+.section2-const .pourquoi-const h3 {
+    text-align: start;
+    align-items: center;
+    color: var(--color-text);
+}
+
+.section1-const .pourquoi-const {
+    height: 50vh;
+    background: var(--bg-second);
+    padding: 2rem;
+}
+
+/* ==============================================separation de la section================================================================== */
+
+
+/* deuxieme section3 */
+.section3-const {
+    height: 50vh;
+    background: var(--bg-body);
+    padding: 2rem;
+    color: var(--color-text);
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+
+}
+
+/* global text modification */
+.section3-const small {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.section3-const h1,
+h2 {
+    font-weight: bold;
+    color: inherit;
+    text-transform: uppercase;
+}
+
+.section1-const,
+.section2-const,
+.section3-const h1 {
+    background: var(--bg-second);
+    margin: 2px 5px;
+    cursor: pointer;
+}
+
+.linkbc {
+    display: none;
+}
+
+/* fin de global text  */
+
+.section2-const .virement-const h2 {
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: var(--color-text);
+}
+
+.section2-const .virement-const small {
+    text-align: start;
+    align-items: center;
+    color: var(--color-text);
+}
+
+.section1-const .virement-const {
+    height: 50vh;
+    background: inherit;
+    padding: 2rem;
+}
+
+/* fyatu div */
+
+.fyatu-const .service-fyatu a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.fyatu-const .service-fyatu a:hover {
+    color: var(--blue);
+}
+
+/* fin fyatu div */
+
+/* fin de la section3 */
+
+/* section 4 gallerie */
+.gallerie-const {
+    display: block;
+    margin-top: 2rem;
+    background: var(--bg-body);
+    border-bottom: 10px solid var(--bg-second);
+}
+
+.gallerie1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.gallerie-const img {
+    width: 100%;
+    height: 28rem;
+}
+
+.gallerie2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gallerie3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gallerie4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* fin de la section 4 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* tout footer */
+
+footer {
+    color: var(--color-text);
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    margin-bottom: 0rem;
+    background-color: var(--bg-body);
+}
+
+footer .de-footer {
+    display: flex;
+    background: var(--bg-body);
+}
+
+.de-footer1 {
+    flex: 1;
+
+
+}
+
+.img-titre {
+    margin: 10px auto;
+    width: 90%;
+    clear: both;
+    display: flex;
+}
+
+.de-footer1 img {
+    margin-top: 30px;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+/* .de-footer1 h1 {
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    left: -50px;
+    top: -20px;
+    text-align: center;
+    color: #000;
+} */
+.de-footer1 h1 {
+    padding: 1rem;
+    font-weight: bold;
+    position: relative;
+    top: 1rem;
+    color: var(--color-text);
+    word-wrap: break-word;
+    align-items: center;
+
+}
+
+.program {
+    margin-left: 2rem;
+    font-weight: 600;
+
+}
+
+.program h2 {
+    font-size: 20px;
+    text-align: start;
+    margin-left: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 10px;
+    text-decoration: underline;
+
+}
+
+/* les sites et les adresses a contacter */
+.de-footer2 {
+    flex: 1;
+    display: inline-block;
+
+
+}
+
+.foo-adresse {
+    padding: 1rem;
+    font-weight: bold;
+    position: relative;
+    top: 1rem;
+    color: var(--color-text);
+    word-wrap: break-word;
+
+    align-items: center;
+}
+
+.de-footer2 {
+    margin-bottom: 20px;
+    color: #eb2A5b;
+}
+
+.foo-adresse h2 {
+    margin-top: 2rem;
+}
+
+.line {
+    padding-top: 4rem;
+    margin: 35px;
+    color: var(--color-text);
+
+}
+
+.line a {
+
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.line a:hover {
+    color: var(--blue);
+}
+
+.fa-map-marked,
+.fa-envelope,
+.fa-phone-alt,
+.fa-youtube,
+.fa-facebook,
+.fa-whatsapp,
+.fa-twitter {
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.fa-map-marked:hover,
+.fa-envelope:hover,
+.fa-phone-alt:hover,
+.fa-youtube:hover,
+.fa-facebook:hover,
+.fa-whatsapp:hover,
+.fa-twitter:hover {
+
+
+    font-size: 27px;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+}
+
+/* finit les liens de contacter */
+
+
+/* le div hero est reserve pour le calendrier et voila it start by here */
+#hero {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+
+
+}
+
+#hero .calendrier {
+    margin-top: 2rem;
+}
+
+pre {
+    margin-top: 0.2rem;
+}
+
+.fa-arrows-alt-v {
+    cursor: pointer;
+}
+
+#calendar {
+    display: block;
+}
+
+
+.calendar-year {
+    display: block;
+}
+
+
+/* .calendar-table{
+    z-index: 35;
+} */
+
+.calendar-inner {
+    z-index: 20;
+}
+
+.calendar {
+    height: 40vh;
+}
+
+.btn-programme-de-culte {
+    position: relative;
+    left: 5rem;
+    top: 25rem;
+    background: var(--bg-body);
+    color: var(--color-text);
+}
+
+.btn-programme-de-culte:hover {
+    background: var(--bg-body);
+    color: var(--color-hover);
+}
+
+/* la fin de div hero */
+
+.copy {
+    margin-top: 0px;
+    background: var(--background-head-footer);
+    color: var(--text-static);
+    margin: 0.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-between;
+
+}
+
+.copy .s {
+    padding: 5px;
+}
+
+.copy .social p {
+    margin: 10px;
+    display: inline-flex;
+    border: 1px solid var(--dark-head-footer);
+    border-radius: 100%;
+    color: var(--text-static);
+    padding: 5px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.copy a {
+    text-decoration: none;
+    color: var(--text-static);
+}
+
+;
+/*fin pied */

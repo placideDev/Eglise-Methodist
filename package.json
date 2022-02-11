@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "http-server": "^14.1.0"
+  },
+  "name": "projet_eglise",
+  "version": "1.0.0",
+  "main": "eglise.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Placide-Salumu/Calendrier.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Placide-Salumu/Calendrier/issues"
+  },
+  "homepage": "https://github.com/Placide-Salumu/Calendrier#readme",
+  "description": ""
+}
